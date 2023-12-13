@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" contents="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather App - AR</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+
+
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <button><img src="images/search.png"></button>
+        </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+
+        <div class="weather">
+            <img src="images/rain.png" class="weather-icon">
+            <h1 class="temp">22*C</h1>
+            <h2 class="city">New York</h2>
+            <div class="details">
+                <div class="col1">
+                    <img src="images/humidity.png">
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col2">
+                    <img src="images/wind.png">
+                    <div>
+                        <p class="wind">15 kn/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            
+            <div class="outermodl">
+                <div class="modl" style="padding-left: 50px; margin-top: 20px;">
+                    
+                    
+                    <model-viewer 
+                        src=""
+                        ios-src="https://cdn.glitch.com/36cb8393-65c6-408d-a538-055ada20431b/Astronaut.usdz?v=1569545377878"
+                        alt="A 3D model of an astronaut"
+                        shadow-intensity="1"
+                        camera-controls
+                        auto-rotate ar>
+                        <div slot="hotspot-1">
+                            <div class="lbl" style="font-size: 35px; position: absolute; bottom: 134px; left: 20%;">Model Label</div>
+                        </div>
+                    </model-viewer>
+                
+                
+                </div>
+            </div>
+            <br>
+            <h2>View in your Space</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
